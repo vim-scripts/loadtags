@@ -1,0 +1,14 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2987
+
+When you open a file, it searches for tags files in all ancestor directories and loads them. This is useful when you work on several projects and have different set of tags for each of them.
+
+Let's say that you open file /home/user/projects/my_proj/lib/hello.pm. Loadtags plugin looks for files 
+
+/home/user/projects/my_proj/lib/tags, 
+/home/user/projects/my_proj/tags, 
+/home/user/projects/tags, 
+/home/user/tags, 
+/home/tags, 
+/tags 
+
+and calls setlocal tags+= on those that exist.
